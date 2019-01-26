@@ -59,6 +59,6 @@ class InteractiveRecord
     value_name = attribute.values[0]
     
     sql = "SELECT * FROM #{self.table_name} WHERE #{column_name} = ?"
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, value_name)
   end 
 end
